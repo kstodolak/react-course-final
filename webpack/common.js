@@ -6,7 +6,7 @@ module.exports = {
         index: path(__dirname, '..', 'src', 'index.js')
     },
     output: {
-        filename: '[name].[contenthas:6].js',
+        filename: '[name].[contenthash:6].js',
         path: path(__dirname, '..', 'build')
     },
     resolve: {
@@ -25,8 +25,7 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path(__dirname, '..', 'public', 'index.html'),
-            
+            template: path(__dirname, '..', 'public', 'index.html')
         })
     ]
 }

@@ -2,7 +2,7 @@ import React, {useContext, useState} from 'react';
 import bemCssModules from 'bem-css-modules';
 
 import { StoreContext } from "../../store/StoreProvider";
-import HeaderStyles from './Header.module.scss';
+import {default as HeaderStyles} from './Header.module.scss';
 import LoginForm from "../LoginForm/LoginForm";
 
 const block = bemCssModules(HeaderStyles);

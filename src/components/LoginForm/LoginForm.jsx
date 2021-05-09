@@ -1,6 +1,6 @@
 import React, {useContext, useState} from 'react';
 import bemCssModules from "bem-css-modules";
-import LoginFormStyles from './LoginForm.module.scss';
+import {default as LoginFormStyles} from './LoginForm.module.scss';
 import Modal from "../Modal/Modal";
 import {StoreContext} from "../../store/StoreProvider";
 import request from "../../helpers/request";
@@ -16,7 +16,6 @@ const LoginForm = ({onCloseModalHandle, isModalOpen}) => {
     const passwordChangeHandle = e => setPassword(e.target.value);
     const submitHandle = async e =>{
         e.preventDefault();
-        console.log('SUBMIT');
         const { data, status } = await request.post(
             '/users',
             {
